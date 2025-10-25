@@ -1,4 +1,4 @@
-a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1761328074;s:6:"expire";i:1792864074;s:4:"tags";s:37:"f73_LAYOUT_GENERAL_CACHE_TAG,f73_MAGE";}
+a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1761384563;s:6:"expire";i:1792920563;s:4:"tags";s:37:"f73_LAYOUT_GENERAL_CACHE_TAG,f73_MAGE";}
 <?xml version="1.0"?>
 <layouts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><handle id="catalog_category_view"><body/>
 </handle><handle id="catalogsearch_advanced_index"><body/>
@@ -7179,13 +7179,9 @@ a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1761328074;s:6:"expire";i:1792864074;s:4:"t
    </referenceBlock>
    <move element="page.main.title" destination="content.top" before="-"/>
 </body>
-</handle><handle id="default"><body>
-   <referenceContainer name="content">
-      <block class="Magento\Framework\View\Element\Template" name="test.swiper" template="Magento_Theme::test-swiper.phtml"/>
-   </referenceContainer>
-</body>
-</handle><handle id="default_head_blocks"><head>
-   <css src="Magento_Theme::css/swiper-bundle.min.css"/>
+</handle><handle id="catalog_product_view"><head>
+   <css src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" src_type="url"/>
 </head>
 </handle><layout id="1column"><update handle="empty"/>
 <referenceContainer name="page.wrapper">

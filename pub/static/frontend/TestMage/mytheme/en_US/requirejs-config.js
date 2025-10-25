@@ -1119,34 +1119,14 @@ require.config(config);
 })();
 (function() {
 var config = {
-    map: {
-        '*': {
-            swiper: 'Magento_Theme/js/swiper'
-        }
-    }
-};
-
-require.config(config);
-})();
-(function() {
-var config = {
-    paths: {
-        swiper: 'Magento_Theme/js/swiper/swiper-bundle.min'
-    },
-    shim: {
-        swiper: {
-            exports: 'Swiper'
-        }
-    },
     config: {
         mixins: {
             'Magento_Swatches/js/swatch-renderer': {
-                'Magento_Swatches/js/swatch-slider': true
+                'Magento_Swatches/js/swatch-renderer-mixin': true
             }
         }
     }
 };
-
 require.config(config);
 })();
 

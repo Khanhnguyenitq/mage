@@ -13945,12 +13945,171 @@ button.braintree-googlepay-button.black.long,
 #braintree_cc_number {
   padding-left: 68px;
 }
-.swatch-option {
-  border-radius: 12px;
-  padding: 70px 60px;
-  border: 1px solid #ccc;
+.swatch-attribute .swatch-attribute-options {
+  position: relative;
 }
-.swatch-option.selected {
-  border-color: #007bff;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+.swatch-attribute .swatch-attribute-options .swiper {
+  padding: 0 50px;
+  margin: 0 -15px;
+  overflow: visible;
+}
+@media (max-width: 768px) {
+  .swatch-attribute .swatch-attribute-options .swiper {
+    padding: 0 40px;
+    margin: 0 -10px;
+  }
+}
+.swatch-attribute .swatch-attribute-options .swiper-wrapper {
+  display: flex;
+  align-items: stretch;
+}
+.swatch-attribute .swatch-attribute-options .swiper-slide {
+  width: auto !important;
+  height: auto;
+}
+.swatch-attribute .swatch-attribute-options .swiper-button-prev,
+.swatch-attribute .swatch-attribute-options .swiper-button-next {
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  color: #333;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.swatch-attribute .swatch-attribute-options .swiper-button-prev:after,
+.swatch-attribute .swatch-attribute-options .swiper-button-next:after {
+  font-size: 18px;
+  font-weight: bold;
+}
+.swatch-attribute .swatch-attribute-options .swiper-button-prev:hover,
+.swatch-attribute .swatch-attribute-options .swiper-button-next:hover {
+  border-color: #333;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.swatch-attribute .swatch-attribute-options .swiper-button-prev.swiper-button-disabled,
+.swatch-attribute .swatch-attribute-options .swiper-button-next.swiper-button-disabled {
+  opacity: 0.3;
+}
+@media (max-width: 768px) {
+  .swatch-attribute .swatch-attribute-options .swiper-button-prev,
+  .swatch-attribute .swatch-attribute-options .swiper-button-next {
+    width: 35px;
+    height: 35px;
+  }
+  .swatch-attribute .swatch-attribute-options .swiper-button-prev:after,
+  .swatch-attribute .swatch-attribute-options .swiper-button-next:after {
+    font-size: 16px;
+  }
+}
+.swatch-attribute .swatch-attribute-options .swiper-button-prev {
+  left: 0;
+}
+.swatch-attribute .swatch-attribute-options .swiper-button-next {
+  right: 0;
+}
+.swatch-attribute .swatch-option.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: none;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+}
+.swatch-attribute .swatch-option.image .swatch-image-card {
+  background: #fff;
+  border: 2px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 15px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  min-width: 120px;
+  text-align: center;
+  position: relative;
+}
+@media (max-width: 640px) {
+  .swatch-attribute .swatch-option.image .swatch-image-card {
+    min-width: 100px;
+    padding: 12px;
+  }
+}
+.swatch-attribute .swatch-option.image .swatch-image-wrapper {
+  width: 100%;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9f9f9;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.swatch-attribute .swatch-option.image .swatch-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  max-width: 150px;
+  max-height: 150px;
+}
+@media (max-width: 640px) {
+  .swatch-attribute .swatch-option.image .swatch-image-wrapper img {
+    max-width: 100px;
+    max-height: 100px;
+  }
+}
+.swatch-attribute .swatch-option.image .swatch-image-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  line-height: 1.4;
+  word-break: break-word;
+}
+@media (max-width: 640px) {
+  .swatch-attribute .swatch-option.image .swatch-image-label {
+    font-size: 12px;
+  }
+}
+.swatch-attribute .swatch-option.image:hover .swatch-image-card {
+  border-color: #333;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+.swatch-attribute .swatch-option.image.selected .swatch-image-card {
+  border-color: #ff6b00;
+  background: #fff5f0;
+  box-shadow: 0 4px 16px rgba(255, 107, 0, 0.2);
+}
+.swatch-attribute .swatch-option.image.selected .swatch-image-card:after {
+  content: '✓';
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  background: #ff6b00;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 24px;
+}
+.swatch-attribute .swatch-option.image[option-empty="true"] .swatch-image-card {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.swatch-attribute .swatch-option.image[option-empty="true"] .swatch-image-card:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: #f00;
+  transform: translateY(-50%) rotate(-45deg);
+  z-index: 1;
 }

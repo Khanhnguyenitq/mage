@@ -2178,12 +2178,3 @@
     margin-left: 85px;
   }
 }
-.swatch-option {
-  border-radius: 12px;
-  padding: 70px 60px;
-  border: 1px solid #ccc;
-}
-.swatch-option.selected {
-  border-color: #007bff;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}

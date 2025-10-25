@@ -1,0 +1,63 @@
+# Tệp và thư mục hệ thống / IDE
+.DS_Store
+.idea/
+.vscode/
+Thumbs.db
+*.log
+
+# Cấu hình môi trường cục bộ (local environment)
+# TRÁNH ĐẨY THÔNG TIN KẾT NỐI DB, API KEYS CỦA MÔI TRƯỜNG DEV CỤC BỘ LÊN GIT
+# Nếu sử dụng Magento 2
+app/etc/env.php
+
+# Magento 1:
+# app/etc/local.xml 
+# Bạn NÊN giữ file này và chỉnh sửa các thông tin nhạy cảm trước khi commit, 
+# hoặc sử dụng file ignore khác nếu cần thiết.
+
+---
+
+# Thư mục chứa nội dung được tạo tự động (Generated/Cache/Media)
+
+# 1. Cache & Session (Magento 1 & 2)
+var/cache/*
+var/session/*
+var/log/*
+var/tmp/*
+
+# Magento 2 Cụ thể
+var/page_cache/*
+var/view_preprocessed/*
+generated/*
+pub/static/* # Ngoại trừ file .htaccess
+
+# Các thư mục này thường KHÔNG nên commit
+# Nếu bạn cần commit các file tĩnh (CSS/JS) đã được biên dịch, hãy xóa dòng này
+!pub/static/.htaccess
+
+# 2. Media (Hình ảnh, tệp tải lên của người dùng)
+pub/media/*
+
+# Ngoại trừ các thư mục placeholder trống để Magento có thể hoạt động đúng
+!pub/media/.htaccess
+!pub/media/captcha/.gitkeep
+!pub/media/customer/.gitkeep
+!pub/media/downloadable/.gitkeep
+!pub/media/wysiwyg/.gitkeep
+!pub/media/catalog/.gitkeep
+
+# 3. Thư mục cài đặt và vendor (Dependencies)
+vendor/*
+
+# Composer
+composer.lock  # Nếu bạn muốn lock phiên bản, hãy giữ lại. Nếu không, ignore.
+/auth.json
+/vendor/
+/node_modules/
+/yarn.lock
+
+# Test & Debug
+/dev/tests/
+/update/
+/phpunit.xml
+/phpserver.log
