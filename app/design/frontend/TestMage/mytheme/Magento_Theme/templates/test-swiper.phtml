@@ -1,0 +1,26 @@
+<div class="swiper mySwiper" style="width: 400px; height: 200px;">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background: #ff6f61;">Slide 1</div>
+        <div class="swiper-slide" style="background: #6ab04c;">Slide 2</div>
+        <div class="swiper-slide" style="background: #3498db;">Slide 3</div>
+        <div class="swiper-slide" style="background: #f9ca24;">Slide 4</div>
+    </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+</div>
+
+<script type="text/javascript">
+    require(['jquery', 'swiper'], function ($, Swiper) {
+        $(document).ready(function () {
+            new Swiper('.mySwiper', {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev'
+                },
+                loop: true
+            });
+        });
+    });
+</script>
