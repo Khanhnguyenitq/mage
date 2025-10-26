@@ -1,4 +1,4 @@
-& when (@media-common =true) {
+& when (@media-common = true) {
 
     .swatch-attribute {
         margin-bottom: 30px;
@@ -6,20 +6,20 @@
         .swatch-attribute-label {
             font-weight: 600;
             font-size: 16px;
-            // margin-bottom: 15px;
+            margin-bottom: 15px;
             display: block;
         }
 
         .swatch-attribute-options {
             position: relative;
-            overflow: hidden; // Quan trọng
+            overflow: hidden;
 
             // Swiper container
             .swiper {
                 padding: 0 15px;
-                margin: 0 -15px; // Cho phép scroll full width
-                overflow: visible;
-                width: calc(100% + 30px); // Fix width
+                margin: 0 -15px;
+                overflow: hidden;
+                width: calc(100% + 30px);
 
                 @media (max-width: 768px) {
                     padding: 0 10px;
@@ -30,177 +30,147 @@
 
             .swiper-wrapper {
                 display: flex;
-                align-items: stretch;
-                box-sizing: border-box;
+                align-items: center;
             }
 
             .swiper-slide {
                 width: auto !important;
-                height: auto;
                 flex-shrink: 0;
-                box-sizing: border-box;
-            }
-
-            // ẨN navigation
-            .swiper-button-prev,
-            .swiper-button-next {
-                display: none !important;
             }
         }
 
+        // Reset Magento default outline
         .swatch-option {
             &.selected {
                 outline: none;
             }
 
             &:not(.disabled):hover {
-                    outline: none;
-                }
-            }
-
-            // ============================================
-            // FIX ẢNH BỊ VỠ
-            // ============================================
-            .swatch-option.image {
-                display: block;
-                width: auto;
-                height: 100%;
-                border: none;
-                background: transparent;
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-
-                &:not(.disabled):hover,
-                &:not([option-empty="true"]):hover {
-                    border: none;
-                    outline: none;
-                }
-
-                .swatch-image-card {
-                    background: #fff;
-                    border: 2px solid #e5e5e5;
-                    border-radius: 12px;
-                    padding: 15px;
-                    transition: all 0.3s ease;
-                    cursor: pointer;
-                    width: 140px; // Fixed width
-                    min-height: 180px; // Min height để chứa label + image
-                    text-align: center;
-                    position: relative;
-                    display: flex;
-                    flex-direction: column;
-                    box-sizing: border-box;
-
-                    @media (max-width: 640px) {
-                        width: 110px;
-                        min-height: 150px;
-                        padding: 10px;
-                    }
-                }
-
-                // LABEL ở trên
-                .swatch-image-label {
-                    font-size: 13px;
-                    font-weight: 600;
-                    color: #333;
-                    line-height: 1.3;
-                    word-break: break-word;
-                    margin-bottom: 10px;
-                    flex-shrink: 0; // Không cho shrink
-                    min-height: 32px; // Đảm bảo có space cho 2 dòng text
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-
-                    @media (max-width: 640px) {
-                        font-size: 11px;
-                        margin-bottom: 8px;
-                        min-height: 28px;
-                    }
-                }
-
-                .swatch-image-wrapper {
-                    width: 100%;
-                    height: 110px; // FIXED HEIGHT thay vì padding trick
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    background: #f9f9f9;
-                    border-radius: 8px;
-                    overflow: hidden;
-                    flex-shrink: 0;
-                    position: relative;
-    
-                    @media (max-width: 640px) {
-                        height: 85px; // Nhỏ hơn trên mobile
-                    }
-    
-                    img {
-                        width: 100%; // ẢNH FULL WIDTH
-                        height: 100%; // ẢNH FULL HEIGHT
-                        object-fit: contain; // Giữ tỷ lệ, không crop
-                        object-position: center;
-                        display: block;
-                    }
-                }
-                // Hover effect
-                &:hover .swatch-image-card {
-                    border-color: #ff6b00;
-                }
-
-                // Selected state
-                &.selected .swatch-image-card {
-                    border-color: #ff6b00;
-                    border-width: 3px;
-                    padding: 14px;
-                }
-
-                // Disabled state
-                &[option-empty="true"] .swatch-image-card {
-                    opacity: 0.5;
-                    cursor: not-allowed;
-                    position: relative;
-
-                    &:before {
-                        content: '';
-                        position: absolute;
-                        top: 50%;
-                        left: 15%;
-                        right: 15%;
-                        height: 2px;
-                        background: #e74c3c;
-                        transform: translateY(-50%) rotate(-45deg);
-                        z-index: 3;
-                    }
-
-                    &:hover {
-                        border-color: #e5e5e5;
-                        box-shadow: none;
-                        transform: none;
-                    }
-                }
+                outline: none;
             }
         }
 
-        // Add scrollbar styling (optional)
-        .swatch-attribute-options .swiper {
-            &::-webkit-scrollbar {
-                height: 6px;
+        // IMAGE SWATCH - Custom style với background image
+        .swatch-option.image {
+            // Override Magento defaults
+            width: 120px !important; // Card width
+            height: auto !important;
+            min-height: 160px !important;
+            border: 2px solid #e5e5e5 !important;
+            border-radius: 12px !important;
+            background-size: contain !important; // Thay vì initial
+            background-position: center 50px !important; // Đẩy ảnh xuống dưới label
+            background-repeat: no-repeat !important;
+            background-color: #f9f9f9 !important;
+            margin: 0 !important;
+            padding: 15px 10px !important;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            box-sizing: border-box;
+
+            @media (max-width: 640px) {
+                width: 100px !important;
+                min-height: 140px !important;
+                padding: 10px 8px !important;
+                background-position: center 40px !important;
             }
 
-            &::-webkit-scrollbar-track {
-                background: #f1f1f1;
-                border-radius: 10px;
+            // THÊM LABEL bằng pseudo-element từ data attribute
+            &:before {
+                content: attr(data-option-label);
+                display: block;
+                width: 100%;
+                font-size: 13px;
+                font-weight: 600;
+                color: #333;
+                text-align: center;
+                line-height: 1.3;
+                word-break: break-word;
+                margin-bottom: 10px;
+                min-height: 32px;
+                position: relative;
+                z-index: 1;
+
+                @media (max-width: 640px) {
+                    font-size: 11px;
+                    min-height: 28px;
+                    margin-bottom: 8px;
+                }
             }
 
-            &::-webkit-scrollbar-thumb {
-                background: #888;
-                border-radius: 10px;
+            // HOVER
+            &:not(.disabled):not([data-option-empty="true"]):hover {
+                border-color: #ff6b00 !important;
+                box-shadow: 0 2px 8px rgba(255,107,0,0.15);
+            }
+
+            // SELECTED
+            &.selected {
+                border-color: #ff6b00 !important;
+                border-width: 3px !important;
+                padding: 14px 9px !important;
+                background-color: #fff5f0 !important;
+
+                @media (max-width: 640px) {
+                    padding: 9px 7px !important;
+                }
+
+                // Label color khi selected
+                &:before {
+                    color: #ff6b00;
+                }
+
+                // Checkmark
+                &:after {
+                    content: '✓';
+                    position: absolute;
+                    top: 8px;
+                    right: 8px;
+                    width: 22px;
+                    height: 22px;
+                    background: #ff6b00;
+                    color: #fff;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 12px;
+                    font-weight: bold;
+                    line-height: 22px;
+                    z-index: 2;
+                }
+            }
+
+            // DISABLED
+            &.disabled,
+            &[data-option-empty="true"] {
+                opacity: 0.5;
+                cursor: not-allowed;
+                position: relative;
+
+                // Line-through
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 15%;
+                    right: 15%;
+                    height: 2px;
+                    background: #e74c3c;
+                    transform: translateY(-50%) rotate(-45deg);
+                    z-index: 3;
+                }
 
                 &:hover {
-                    background: #555;
+                    border-color: #e5e5e5 !important;
+                    box-shadow: none;
                 }
             }
         }
     }
+}
