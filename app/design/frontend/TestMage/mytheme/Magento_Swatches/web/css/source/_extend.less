@@ -1,192 +1,206 @@
-& when (@media-common = true) {
-    
+& when (@media-common =true) {
+
     .swatch-attribute {
+        margin-bottom: 30px;
+
+        .swatch-attribute-label {
+            font-weight: 600;
+            font-size: 16px;
+            // margin-bottom: 15px;
+            display: block;
+        }
 
         .swatch-attribute-options {
             position: relative;
+            overflow: hidden; // Quan trọng
 
             // Swiper container
             .swiper {
-                padding: 0 50px;
-                margin: 0 -15px;
+                padding: 0 15px;
+                margin: 0 -15px; // Cho phép scroll full width
                 overflow: visible;
+                width: calc(100% + 30px); // Fix width
 
                 @media (max-width: 768px) {
-                    padding: 0 40px;
+                    padding: 0 10px;
                     margin: 0 -10px;
+                    width: calc(100% + 20px);
                 }
             }
 
             .swiper-wrapper {
                 display: flex;
                 align-items: stretch;
+                box-sizing: border-box;
             }
 
             .swiper-slide {
                 width: auto !important;
                 height: auto;
+                flex-shrink: 0;
+                box-sizing: border-box;
             }
 
-            // Navigation
+            // ẨN navigation
             .swiper-button-prev,
             .swiper-button-next {
-                width: 40px;
-                height: 40px;
-                background: #fff;
-                border: 2px solid #ddd;
-                border-radius: 50%;
-                color: #333;
-                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-                transition: all 0.3s ease;
-
-                &:after {
-                    font-size: 18px;
-                    font-weight: bold;
-                }
-
-                &:hover {
-                    border-color: #333;
-                    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-                }
-
-                &.swiper-button-disabled {
-                    opacity: 0.3;
-                }
-
-                @media (max-width: 768px) {
-                    width: 35px;
-                    height: 35px;
-                    &:after {
-                        font-size: 16px;
-                    }
-                }
-            }
-
-            .swiper-button-prev {
-                left: 0;
-            }
-
-            .swiper-button-next {
-                right: 0;
+                display: none !important;
             }
         }
 
-        // ============================================
-        // CHỈ STYLE IMAGE SWATCH - GIỐNG ẢNH CỦA BẠN
-        // ============================================
-        .swatch-option.image {
-            display: block;
-            width: 100%;
-            height: auto;
-            border: none;
-            background: transparent;
-            margin: 0;
-            padding: 0;
+        .swatch-option {
+            &.selected {
+                outline: none;
+            }
 
-            .swatch-image-card {
-                background: #fff;
-                border: 2px solid #e5e5e5;
-                border-radius: 12px;
-                padding: 15px;
-                transition: all 0.3s ease;
-                cursor: pointer;
-                min-width: 120px;
-                text-align: center;
-                position: relative;
-
-                @media (max-width: 640px) {
-                    min-width: 100px;
-                    padding: 12px;
+            &:not(.disabled):hover {
+                    outline: none;
                 }
             }
 
-            .swatch-image-wrapper {
-                width: 100%;
-                aspect-ratio: 1;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background: #f9f9f9;
-                border-radius: 8px;
-                overflow: hidden;
-                margin-bottom: 10px;
+            // ============================================
+            // FIX ẢNH BỊ VỠ
+            // ============================================
+            .swatch-option.image {
+                display: block;
+                width: auto;
+                height: 100%;
+                border: none;
+                background: transparent;
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
 
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: contain;
-                    max-width: 150px;
-                    max-height: 150px;
+                &:not(.disabled):hover,
+                &:not([option-empty="true"]):hover {
+                    border: none;
+                    outline: none;
+                }
+
+                .swatch-image-card {
+                    background: #fff;
+                    border: 2px solid #e5e5e5;
+                    border-radius: 12px;
+                    padding: 15px;
+                    transition: all 0.3s ease;
+                    cursor: pointer;
+                    width: 140px; // Fixed width
+                    min-height: 180px; // Min height để chứa label + image
+                    text-align: center;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    box-sizing: border-box;
 
                     @media (max-width: 640px) {
-                        max-width: 100px;
-                        max-height: 100px;
+                        width: 110px;
+                        min-height: 150px;
+                        padding: 10px;
                     }
                 }
-            }
 
-            .swatch-image-label {
-                font-size: 14px;
-                font-weight: 500;
-                color: #333;
-                line-height: 1.4;
-                word-break: break-word;
-
-                @media (max-width: 640px) {
-                    font-size: 12px;
-                }
-            }
-
-            // Hover effect
-            &:hover .swatch-image-card {
-                border-color: #333;
-                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-                transform: translateY(-2px);
-            }
-
-            // Selected state
-            &.selected .swatch-image-card {
-                border-color: #ff6b00;
-                background: #fff5f0;
-                box-shadow: 0 4px 16px rgba(255,107,0,0.2);
-
-                // Checkmark
-                &:after {
-                    content: '✓';
-                    position: absolute;
-                    top: 8px;
-                    right: 8px;
-                    width: 24px;
-                    height: 24px;
-                    background: #ff6b00;
-                    color: #fff;
-                    border-radius: 50%;
+                // LABEL ở trên
+                .swatch-image-label {
+                    font-size: 13px;
+                    font-weight: 600;
+                    color: #333;
+                    line-height: 1.3;
+                    word-break: break-word;
+                    margin-bottom: 10px;
+                    flex-shrink: 0; // Không cho shrink
+                    min-height: 32px; // Đảm bảo có space cho 2 dòng text
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    font-size: 14px;
-                    font-weight: bold;
-                    line-height: 24px;
+
+                    @media (max-width: 640px) {
+                        font-size: 11px;
+                        margin-bottom: 8px;
+                        min-height: 28px;
+                    }
+                }
+
+                .swatch-image-wrapper {
+                    width: 100%;
+                    height: 110px; // FIXED HEIGHT thay vì padding trick
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: #f9f9f9;
+                    border-radius: 8px;
+                    overflow: hidden;
+                    flex-shrink: 0;
+                    position: relative;
+    
+                    @media (max-width: 640px) {
+                        height: 85px; // Nhỏ hơn trên mobile
+                    }
+    
+                    img {
+                        width: 100%; // ẢNH FULL WIDTH
+                        height: 100%; // ẢNH FULL HEIGHT
+                        object-fit: contain; // Giữ tỷ lệ, không crop
+                        object-position: center;
+                        display: block;
+                    }
+                }
+                // Hover effect
+                &:hover .swatch-image-card {
+                    border-color: #ff6b00;
+                }
+
+                // Selected state
+                &.selected .swatch-image-card {
+                    border-color: #ff6b00;
+                    border-width: 3px;
+                    padding: 14px;
+                }
+
+                // Disabled state
+                &[option-empty="true"] .swatch-image-card {
+                    opacity: 0.5;
+                    cursor: not-allowed;
+                    position: relative;
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        left: 15%;
+                        right: 15%;
+                        height: 2px;
+                        background: #e74c3c;
+                        transform: translateY(-50%) rotate(-45deg);
+                        z-index: 3;
+                    }
+
+                    &:hover {
+                        border-color: #e5e5e5;
+                        box-shadow: none;
+                        transform: none;
+                    }
                 }
             }
+        }
 
-            // Disabled/Out of stock
-            &[option-empty="true"] .swatch-image-card {
-                opacity: 0.4;
-                cursor: not-allowed;
+        // Add scrollbar styling (optional)
+        .swatch-attribute-options .swiper {
+            &::-webkit-scrollbar {
+                height: 6px;
+            }
 
-                &:before {
-                    content: '';
-                    position: absolute;
-                    top: 50%;
-                    left: 10%;
-                    right: 10%;
-                    height: 2px;
-                    background: #f00;
-                    transform: translateY(-50%) rotate(-45deg);
-                    z-index: 1;
+            &::-webkit-scrollbar-track {
+                background: #f1f1f1;
+                border-radius: 10px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: #888;
+                border-radius: 10px;
+
+                &:hover {
+                    background: #555;
                 }
             }
         }
     }
-}
