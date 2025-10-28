@@ -1104,7 +1104,30 @@ var config = {
 require.config(config);
 })();
 (function() {
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
 var config = {
+    deps: [
+        'Magento_Theme/js/theme'
+    ]
+};
+
+require.config(config);
+})();
+(function() {
+var config = {
+    paths: {
+        'swiper': 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min'
+    },
+    shim: {
+        'swiper': {
+            deps: ['jquery'],
+            exports: 'Swiper'
+        }
+    },
     config: {
         mixins: {
             'Magento_Swatches/js/swatch-renderer': {

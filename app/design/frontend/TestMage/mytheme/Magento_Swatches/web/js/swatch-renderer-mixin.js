@@ -6,44 +6,44 @@ define(['jquery', 'swiper'], function ($, Swiper) {
 
     return function (widget) {
         $.widget('mage.SwatchRenderer', widget, {
-            
+
             _RenderSwatchOptions: function (config, controlId) {
                 var html = this._super(config, controlId),
+                    optionConfig = this.options.jsonSwatchConfig[config.id],
+                    hasImageSwatches = false,
                     sliderId = 'swatch-slider-' + controlId;
 
-                // Wrap trong swiper
+                if (optionConfig) {
+                    $.each(optionConfig, function (key, value) {
+                        if (parseInt(value.type, 10) === 2) { // type 2 = image
+                            hasImageSwatches = true;
+                            return false; // break loop
+                        }
+                    });
+                }
+                  if (!hasImageSwatches) {
+                    return html;
+                }
+
                 var wrappedHtml = '<div class="swatch-slider-container">';
                 wrappedHtml += '<div class="swiper ' + sliderId + '">';
                 wrappedHtml += '<div class="swiper-wrapper">';
 
-                // Wrap từng swatch-option vào swiper-slide
                 var $temp = $('<div>').html(html);
                 $temp.find('.swatch-option').wrap('<div class="swiper-slide"></div>');
                 wrappedHtml += $temp.html();
 
                 wrappedHtml += '</div>';
-                wrappedHtml += '<div class="swiper-button-prev"></div>';
-                wrappedHtml += '<div class="swiper-button-next"></div>';
                 wrappedHtml += '</div></div>';
 
                 // Init swiper
                 setTimeout(function () {
                     new Swiper('.' + sliderId, {
-                        slidesPerView: 'auto', // ✅ Cho phép Swiper tự tính số slide hiển thị
+                        slidesPerView: 'auto',
                         spaceBetween: 12,
                         freeMode: true,
-                        watchOverflow: true, // ✅ Ẩn scroll nếu số lượng slide ít
-                        centerInsufficientSlides: true, // ✅ Căn giữa nếu không đủ slide
-                        navigation: {
-                            nextEl: '.' + sliderId + ' .swiper-button-next',
-                            prevEl: '.' + sliderId + ' .swiper-button-prev'
-                        },
-                        breakpoints: {
-                            320: { spaceBetween: 8 },
-                            480: { spaceBetween: 10 },
-                            768: { spaceBetween: 12 },
-                            1024: { spaceBetween: 15 }
-                        }
+                        watchOverflow: true,
+                        centerInsufficientSlides: true,
                     });
                 }, 100);
 
