@@ -13975,6 +13975,7 @@ button.braintree-googlepay-button.black.long,
 }
 .swatch-attribute .swatch-option.selected {
   outline: none;
+  border: none !important;
 }
 .swatch-attribute .swatch-option:not(.disabled):hover {
   outline: none;
@@ -13982,12 +13983,10 @@ button.braintree-googlepay-button.black.long,
 .swatch-attribute .swatch-option.image {
   width: 120px !important;
   height: auto !important;
-  min-height: 136px !important;
+  min-height: 125px !important;
   border: 2px solid #e5e5e5 !important;
   border-radius: 12px !important;
-  background-size: contain !important;
   background-position: center 50px !important;
-  background-repeat: no-repeat !important;
   margin: 0 !important;
   padding: 15px 10px !important;
   cursor: pointer;
@@ -14001,18 +14000,9 @@ button.braintree-googlepay-button.black.long,
 }
 .swatch-attribute .swatch-option.image:before {
   content: attr(data-option-label);
-  display: block;
   width: 100%;
   font-size: 13px;
   font-weight: 600;
-  color: #333;
-  text-align: center;
-  line-height: 1.3;
-  word-break: break-word;
-  margin-bottom: 10px;
-  min-height: 32px;
-  position: relative;
-  z-index: 1;
 }
 .swatch-attribute .swatch-option.image:not(.disabled):not([data-option-empty="true"]):hover {
   border-color: #FD4C7A !important;
@@ -14046,20 +14036,59 @@ button.braintree-googlepay-button.black.long,
   border-color: #e5e5e5 !important;
   box-shadow: none;
 }
+.swatch-attribute .swatch-option:focus {
+  box-shadow: none;
+}
 .swatch-attribute .swatch-attribute-selected-option {
   display: none;
 }
-.swatch-attribute .swatch-radio-options {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-.swatch-attribute .swatch-radio-item {
-  cursor: pointer;
-  display: flex;
+.swatch-attribute .swatch-option.with-radio-icon {
+  display: inline-flex;
   align-items: center;
-  gap: 4px;
-}
-.swatch-attribute .swatch-radio-item input[type="radio"] {
+  gap: 8px;
+  border: none;
   cursor: pointer;
+  background: #fff;
+  font-size: 14px;
+  /* radio circle */
+}
+.swatch-attribute .swatch-option.with-radio-icon:hover:not(.disabled) {
+  border-color: #000;
+}
+.swatch-attribute .swatch-option.with-radio-icon.selected {
+  border-color: #000;
+}
+.swatch-attribute .swatch-option.with-radio-icon.disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+.swatch-attribute .swatch-option.with-radio-icon .radio-icon {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #767676;
+  border-radius: 50%;
+  flex-shrink: 0;
+  position: relative;
+  background: #fff;
+  transition: all .2s ease;
+}
+.swatch-attribute .swatch-option.with-radio-icon .radio-icon::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background: #000;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  transition: all .25s ease;
+}
+.swatch-attribute .swatch-option.with-radio-icon.selected .radio-icon {
+  border-color: #000;
+}
+.swatch-attribute .swatch-option.with-radio-icon.selected .radio-icon::after {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
 }
