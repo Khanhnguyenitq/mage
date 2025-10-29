@@ -13982,7 +13982,6 @@ button.braintree-googlepay-button.black.long,
 }
 .swatch-attribute .swatch-option.image {
   width: 120px !important;
-  height: auto !important;
   min-height: 125px !important;
   border: 2px solid #e5e5e5 !important;
   border-radius: 12px !important;
@@ -13992,10 +13991,6 @@ button.braintree-googlepay-button.black.long,
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
   box-sizing: border-box;
 }
 .swatch-attribute .swatch-option.image:before {
