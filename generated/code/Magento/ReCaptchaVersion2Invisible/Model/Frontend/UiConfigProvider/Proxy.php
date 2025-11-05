@@ -90,7 +90,7 @@ class Proxy extends \Magento\ReCaptchaVersion2Invisible\Model\Frontend\UiConfigP
     /**
      * {@inheritdoc}
      */
-    public function get() : array
+    public function get(): array
     {
         return $this->_getSubject()->get();
     }

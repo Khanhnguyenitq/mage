@@ -17,7 +17,7 @@ class Interceptor extends \Magento\Catalog\Model\ResourceModel\Attribute\RemoveP
     /**
      * {@inheritdoc}
      */
-    public function removeData(\Magento\Framework\Model\AbstractModel $object, int $attributeSetId) : void
+    public function removeData(\Magento\Framework\Model\AbstractModel $object, int $attributeSetId): void
     {
         $pluginInfo = $this->pluginList->getNext($this->subjectType, 'removeData');
         $pluginInfo ? $this->___callPlugins('removeData', func_get_args(), $pluginInfo) : parent::removeData($object, $attributeSetId);

@@ -384,17 +384,17 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.356.39",
-            "version_normalized": "3.356.39.0",
+            "version": "3.359.4",
+            "version_normalized": "3.359.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "1a08e07656baf7328e18a98b8ec766a6fd5c92a9"
+                "reference": "510cb4b7e2fa3ea09ad2154e7a13fe7675c36b30"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/1a08e07656baf7328e18a98b8ec766a6fd5c92a9",
-                "reference": "1a08e07656baf7328e18a98b8ec766a6fd5c92a9",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/510cb4b7e2fa3ea09ad2154e7a13fe7675c36b30",
+                "reference": "510cb4b7e2fa3ea09ad2154e7a13fe7675c36b30",
                 "shasum": ""
             },
             "require": {
@@ -434,7 +434,7 @@
                 "ext-openssl": "Allows working with CloudFront private distributions and verifying received SNS messages",
                 "ext-sockets": "To use client-side monitoring"
             },
-            "time": "2025-10-14T18:08:04+00:00",
+            "time": "2025-11-03T19:18:23+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -478,7 +478,7 @@
             "support": {
                 "forum": "https://github.com/aws/aws-sdk-php/discussions",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.356.39"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.359.4"
             },
             "install-path": "../aws/aws-sdk-php"
         },
@@ -1222,28 +1222,28 @@
         },
         {
             "name": "codeception/module-asserts",
-            "version": "3.2.0",
-            "version_normalized": "3.2.0.0",
+            "version": "3.2.1",
+            "version_normalized": "3.2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/module-asserts.git",
-                "reference": "eb1f7c980423888f3def5116635754ae4a75bd47"
+                "reference": "8acceb7915a9645230bde14c305c5652d5b229db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/module-asserts/zipball/eb1f7c980423888f3def5116635754ae4a75bd47",
-                "reference": "eb1f7c980423888f3def5116635754ae4a75bd47",
+                "url": "https://api.github.com/repos/Codeception/module-asserts/zipball/8acceb7915a9645230bde14c305c5652d5b229db",
+                "reference": "8acceb7915a9645230bde14c305c5652d5b229db",
                 "shasum": ""
             },
             "require": {
                 "codeception/codeception": "*@dev",
-                "codeception/lib-asserts": "^2.2",
+                "codeception/lib-asserts": "^2.2 | ^3.0.1",
                 "php": "^8.2"
             },
             "conflict": {
                 "codeception/codeception": "<5.0"
             },
-            "time": "2025-05-02T02:33:11+00:00",
+            "time": "2025-10-26T13:12:55+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -1276,7 +1276,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Codeception/module-asserts/issues",
-                "source": "https://github.com/Codeception/module-asserts/tree/3.2.0"
+                "source": "https://github.com/Codeception/module-asserts/tree/3.2.1"
             },
             "install-path": "../codeception/module-asserts"
         },
@@ -3133,21 +3133,21 @@
         },
         {
             "name": "ezyang/htmlpurifier",
-            "version": "v4.18.0",
-            "version_normalized": "4.18.0.0",
+            "version": "v4.19.0",
+            "version_normalized": "4.19.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ezyang/htmlpurifier.git",
-                "reference": "cb56001e54359df7ae76dc522d08845dc741621b"
+                "reference": "b287d2a16aceffbf6e0295559b39662612b77fcf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ezyang/htmlpurifier/zipball/cb56001e54359df7ae76dc522d08845dc741621b",
-                "reference": "cb56001e54359df7ae76dc522d08845dc741621b",
+                "url": "https://api.github.com/repos/ezyang/htmlpurifier/zipball/b287d2a16aceffbf6e0295559b39662612b77fcf",
+                "reference": "b287d2a16aceffbf6e0295559b39662612b77fcf",
                 "shasum": ""
             },
             "require": {
-                "php": "~5.6.0 || ~7.0.0 || ~7.1.0 || ~7.2.0 || ~7.3.0 || ~7.4.0 || ~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0"
+                "php": "~5.6.0 || ~7.0.0 || ~7.1.0 || ~7.2.0 || ~7.3.0 || ~7.4.0 || ~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0 || ~8.5.0"
             },
             "require-dev": {
                 "cerdic/css-tidy": "^1.7 || ^2.0",
@@ -3159,7 +3159,7 @@
                 "ext-iconv": "Converts text to and from non-UTF-8 encodings",
                 "ext-tidy": "Used for pretty-printing HTML"
             },
-            "time": "2024-11-01T03:51:45+00:00",
+            "time": "2025-10-17T16:34:55+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -3191,7 +3191,7 @@
             ],
             "support": {
                 "issues": "https://github.com/ezyang/htmlpurifier/issues",
-                "source": "https://github.com/ezyang/htmlpurifier/tree/v4.18.0"
+                "source": "https://github.com/ezyang/htmlpurifier/tree/v4.19.0"
             },
             "install-path": "../ezyang/htmlpurifier"
         },
@@ -3825,26 +3825,26 @@
         },
         {
             "name": "laminas/laminas-captcha",
-            "version": "2.18.0",
-            "version_normalized": "2.18.0.0",
+            "version": "2.19.0",
+            "version_normalized": "2.19.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-captcha.git",
-                "reference": "4c0965b31ec310ec95c72acd76a016b5030182fe"
+                "reference": "768d2152f9687c27b5dfdb2322bf6001d48cda89"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-captcha/zipball/4c0965b31ec310ec95c72acd76a016b5030182fe",
-                "reference": "4c0965b31ec310ec95c72acd76a016b5030182fe",
+                "url": "https://api.github.com/repos/laminas/laminas-captcha/zipball/768d2152f9687c27b5dfdb2322bf6001d48cda89",
+                "reference": "768d2152f9687c27b5dfdb2322bf6001d48cda89",
                 "shasum": ""
             },
             "require": {
                 "laminas/laminas-recaptcha": "^3.4.0",
-                "laminas/laminas-session": "^2.12",
+                "laminas/laminas-session": "^2.25",
                 "laminas/laminas-stdlib": "^3.10.1",
-                "laminas/laminas-text": "^2.9.0",
+                "laminas/laminas-text": "^2.12.1",
                 "laminas/laminas-validator": "^2.19.0",
-                "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0"
+                "php": "~8.2.0 || ~8.3.0 || ~8.4.0 || ~8.5.0"
             },
             "conflict": {
                 "zendframework/zend-captcha": "*"
@@ -3854,12 +3854,12 @@
                 "laminas/laminas-coding-standard": "~2.5.0",
                 "phpunit/phpunit": "^9.5.26",
                 "psalm/plugin-phpunit": "^0.19.0",
-                "vimeo/psalm": "^5.1"
+                "vimeo/psalm": "^6.13"
             },
             "suggest": {
                 "laminas/laminas-i18n-resources": "Translations of captcha messages"
             },
-            "time": "2025-01-06T20:04:41+00:00",
+            "time": "2025-10-29T17:20:39+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -3895,28 +3895,28 @@
         },
         {
             "name": "laminas/laminas-code",
-            "version": "4.16.0",
-            "version_normalized": "4.16.0.0",
+            "version": "4.17.0",
+            "version_normalized": "4.17.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-code.git",
-                "reference": "1793e78dad4108b594084d05d1fb818b85b110af"
+                "reference": "40d61e2899ec17c5d08bbc0a2d586b3ca17ab9bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-code/zipball/1793e78dad4108b594084d05d1fb818b85b110af",
-                "reference": "1793e78dad4108b594084d05d1fb818b85b110af",
+                "url": "https://api.github.com/repos/laminas/laminas-code/zipball/40d61e2899ec17c5d08bbc0a2d586b3ca17ab9bd",
+                "reference": "40d61e2899ec17c5d08bbc0a2d586b3ca17ab9bd",
                 "shasum": ""
             },
             "require": {
-                "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0"
+                "php": "~8.2.0 || ~8.3.0 || ~8.4.0 || ~8.5.0"
             },
             "require-dev": {
                 "doctrine/annotations": "^2.0.1",
                 "ext-phar": "*",
                 "laminas/laminas-coding-standard": "^3.0.0",
                 "laminas/laminas-stdlib": "^3.18.0",
-                "phpunit/phpunit": "^10.5.37",
+                "phpunit/phpunit": "^10.5.58",
                 "psalm/plugin-phpunit": "^0.19.0",
                 "vimeo/psalm": "^5.15.0"
             },
@@ -3924,7 +3924,7 @@
                 "doctrine/annotations": "Doctrine\\Common\\Annotations >=1.0 for annotation features",
                 "laminas/laminas-stdlib": "Laminas\\Stdlib component"
             },
-            "time": "2024-11-20T13:15:13+00:00",
+            "time": "2025-11-01T09:38:14+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -4419,40 +4419,43 @@
         },
         {
             "name": "laminas/laminas-eventmanager",
-            "version": "3.14.0",
-            "version_normalized": "3.14.0.0",
+            "version": "3.15.0",
+            "version_normalized": "3.15.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-eventmanager.git",
-                "reference": "1837cafaaaee74437f6d8ec9ff7da03e6f81d809"
+                "reference": "90b4bd33264629af8e39caf5aa83473ac03aa04c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-eventmanager/zipball/1837cafaaaee74437f6d8ec9ff7da03e6f81d809",
-                "reference": "1837cafaaaee74437f6d8ec9ff7da03e6f81d809",
+                "url": "https://api.github.com/repos/laminas/laminas-eventmanager/zipball/90b4bd33264629af8e39caf5aa83473ac03aa04c",
+                "reference": "90b4bd33264629af8e39caf5aa83473ac03aa04c",
                 "shasum": ""
             },
             "require": {
-                "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0"
+                "php": "~8.2.0 || ~8.3.0 || ~8.4.0 || ~8.5.0"
             },
             "conflict": {
                 "container-interop/container-interop": "<1.2",
                 "zendframework/zend-eventmanager": "*"
             },
             "require-dev": {
-                "laminas/laminas-coding-standard": "~3.0.0",
+                "amphp/dns": "^2.2",
+                "amphp/socket": "^2.3.1",
+                "laminas/laminas-coding-standard": "~3.1.0",
                 "laminas/laminas-stdlib": "^3.20",
                 "phpbench/phpbench": "^1.3.1",
-                "phpunit/phpunit": "^10.5.38",
+                "phpunit/phpunit": "^10.5.58",
                 "psalm/plugin-phpunit": "^0.19.0",
                 "psr/container": "^1.1.2 || ^2.0.2",
-                "vimeo/psalm": "^5.26.1"
+                "sebastian/recursion-context": "^5.0.1",
+                "vimeo/psalm": "^6.13"
             },
             "suggest": {
                 "laminas/laminas-stdlib": "^2.7.3 || ^3.0, to use the FilterChain feature",
                 "psr/container": "^1.1.2 || ^2.0.2, to use the lazy listeners feature"
             },
-            "time": "2024-11-21T11:31:22+00:00",
+            "time": "2025-10-31T10:29:01+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -5225,21 +5228,21 @@
         },
         {
             "name": "laminas/laminas-modulemanager",
-            "version": "2.17.0",
-            "version_normalized": "2.17.0.0",
+            "version": "2.18.0",
+            "version_normalized": "2.18.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-modulemanager.git",
-                "reference": "3cd6e84ba767b43a47c6c4245a56b30ac3738c6a"
+                "reference": "4b14617df01be6c83ac62fdb689427f8ed56d9c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-modulemanager/zipball/3cd6e84ba767b43a47c6c4245a56b30ac3738c6a",
-                "reference": "3cd6e84ba767b43a47c6c4245a56b30ac3738c6a",
+                "url": "https://api.github.com/repos/laminas/laminas-modulemanager/zipball/4b14617df01be6c83ac62fdb689427f8ed56d9c1",
+                "reference": "4b14617df01be6c83ac62fdb689427f8ed56d9c1",
                 "shasum": ""
             },
             "require": {
-                "brick/varexporter": "^0.3.2 || ^0.4 || ^0.5",
+                "brick/varexporter": "^0.3.2 || ^0.4 || ^0.5 || ^0.6",
                 "laminas/laminas-config": "^3.7",
                 "laminas/laminas-eventmanager": "^3.4",
                 "laminas/laminas-stdlib": "^3.6",
@@ -5251,13 +5254,15 @@
                 "zendframework/zend-modulemanager": "*"
             },
             "require-dev": {
-                "laminas/laminas-coding-standard": "^3.0.1",
+                "amphp/dns": "^1.24 || ^2.1.2",
+                "amphp/socket": "^1.2.1 || ^2.3.1",
+                "laminas/laminas-coding-standard": "~3.1.0",
                 "laminas/laminas-loader": "^2.11",
                 "laminas/laminas-mvc": "^3.7.0",
                 "laminas/laminas-servicemanager": "^3.23.0",
                 "phpunit/phpunit": "^10.5.38",
-                "psalm/plugin-phpunit": "^0.19.0",
-                "vimeo/psalm": "^5.26.1"
+                "psalm/plugin-phpunit": "^0.19.5",
+                "vimeo/psalm": "^6.13.1"
             },
             "suggest": {
                 "laminas/laminas-console": "Laminas\\Console component",
@@ -5265,7 +5270,7 @@
                 "laminas/laminas-mvc": "Laminas\\Mvc component",
                 "laminas/laminas-servicemanager": "Laminas\\ServiceManager component"
             },
-            "time": "2024-11-17T22:29:29+00:00",
+            "time": "2025-10-17T18:22:00+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -21976,17 +21981,17 @@
         },
         {
             "name": "phpcsstandards/phpcsutils",
-            "version": "1.1.2",
-            "version_normalized": "1.1.2.0",
+            "version": "1.1.3",
+            "version_normalized": "1.1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPCSStandards/PHPCSUtils.git",
-                "reference": "b22b59e3d9ec8fe4953e42c7d59117c6eae70eae"
+                "reference": "8b8e17615d04f2fc2cd46fc1d2fd888fa21b3cf9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPCSStandards/PHPCSUtils/zipball/b22b59e3d9ec8fe4953e42c7d59117c6eae70eae",
-                "reference": "b22b59e3d9ec8fe4953e42c7d59117c6eae70eae",
+                "url": "https://api.github.com/repos/PHPCSStandards/PHPCSUtils/zipball/8b8e17615d04f2fc2cd46fc1d2fd888fa21b3cf9",
+                "reference": "8b8e17615d04f2fc2cd46fc1d2fd888fa21b3cf9",
                 "shasum": ""
             },
             "require": {
@@ -22001,7 +22006,7 @@
                 "phpcsstandards/phpcsdevcs": "^1.1.6",
                 "yoast/phpunit-polyfills": "^1.1.0 || ^2.0.0 || ^3.0.0"
             },
-            "time": "2025-09-05T00:00:03+00:00",
+            "time": "2025-10-16T16:39:32+00:00",
             "type": "phpcodesniffer-standard",
             "extra": {
                 "branch-alias": {
@@ -22072,17 +22077,17 @@
         },
         {
             "name": "phpgt/cssxpath",
-            "version": "v1.3.0",
-            "version_normalized": "1.3.0.0",
+            "version": "v1.4.0",
+            "version_normalized": "1.4.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/PhpGt/CssXPath.git",
-                "reference": "45f3ac151fc21d459e2515c3aff97cd4bf877bf8"
+                "url": "https://github.com/phpgt/CssXPath.git",
+                "reference": "008aaf7f381e2396590fc53830f4a8ad9f517c7f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhpGt/CssXPath/zipball/45f3ac151fc21d459e2515c3aff97cd4bf877bf8",
-                "reference": "45f3ac151fc21d459e2515c3aff97cd4bf877bf8",
+                "url": "https://api.github.com/repos/phpgt/CssXPath/zipball/008aaf7f381e2396590fc53830f4a8ad9f517c7f",
+                "reference": "008aaf7f381e2396590fc53830f4a8ad9f517c7f",
                 "shasum": ""
             },
             "require": {
@@ -22091,10 +22096,10 @@
             "require-dev": {
                 "ext-dom": "*",
                 "ext-libxml": "*",
-                "phpstan/phpstan": "^v1.8",
-                "phpunit/phpunit": "^v9.5"
+                "phpstan/phpstan": "^2.1",
+                "phpunit/phpunit": "^9.6"
             },
-            "time": "2024-07-10T13:36:01+00:00",
+            "time": "2025-10-24T09:11:43+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -22109,15 +22114,15 @@
             "authors": [
                 {
                     "name": "Greg Bowler",
-                    "email": "greg.bowler@g105b.com",
+                    "email": "greg@g105b.com",
                     "homepage": "https://www.g105b.com",
                     "role": "Developer"
                 }
             ],
             "description": "Convert CSS selectors to XPath queries.",
             "support": {
-                "issues": "https://github.com/PhpGt/CssXPath/issues",
-                "source": "https://github.com/PhpGt/CssXPath/tree/v1.3.0"
+                "issues": "https://github.com/phpgt/CssXPath/issues",
+                "source": "https://github.com/phpgt/CssXPath/tree/v1.4.0"
             },
             "funding": [
                 {
@@ -23418,17 +23423,17 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.12.12",
-            "version_normalized": "0.12.12.0",
+            "version": "v0.12.14",
+            "version_normalized": "0.12.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "cd23863404a40ccfaf733e3af4db2b459837f7e7"
+                "reference": "95c29b3756a23855a30566b745d218bee690bef2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/cd23863404a40ccfaf733e3af4db2b459837f7e7",
-                "reference": "cd23863404a40ccfaf733e3af4db2b459837f7e7",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/95c29b3756a23855a30566b745d218bee690bef2",
+                "reference": "95c29b3756a23855a30566b745d218bee690bef2",
                 "shasum": ""
             },
             "require": {
@@ -23443,14 +23448,15 @@
                 "symfony/console": "4.4.37 || 5.3.14 || 5.3.15 || 5.4.3 || 5.4.4 || 6.0.3 || 6.0.4"
             },
             "require-dev": {
-                "bamarni/composer-bin-plugin": "^1.2"
+                "bamarni/composer-bin-plugin": "^1.2",
+                "composer/class-map-generator": "^1.6"
             },
             "suggest": {
+                "composer/class-map-generator": "Improved tab completion performance with better class discovery.",
                 "ext-pcntl": "Enabling the PCNTL extension makes PsySH a lot happier :)",
-                "ext-pdo-sqlite": "The doc command requires SQLite to work.",
                 "ext-posix": "If you have PCNTL, you'll want the POSIX extension as well."
             },
-            "time": "2025-09-20T13:46:31+00:00",
+            "time": "2025-10-27T17:15:31+00:00",
             "bin": [
                 "bin/psysh"
             ],
@@ -23493,7 +23499,7 @@
             ],
             "support": {
                 "issues": "https://github.com/bobthecow/psysh/issues",
-                "source": "https://github.com/bobthecow/psysh/tree/v0.12.12"
+                "source": "https://github.com/bobthecow/psysh/tree/v0.12.14"
             },
             "install-path": "../psy/psysh"
         },
@@ -25835,21 +25841,21 @@
         },
         {
             "name": "spomky-labs/pki-framework",
-            "version": "1.3.0",
-            "version_normalized": "1.3.0.0",
+            "version": "1.4.0",
+            "version_normalized": "1.4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Spomky-Labs/pki-framework.git",
-                "reference": "eced5b5ce70518b983ff2be486e902bbd15135ae"
+                "reference": "bf6f55a9d9eb25b7781640221cb54f5c727850d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Spomky-Labs/pki-framework/zipball/eced5b5ce70518b983ff2be486e902bbd15135ae",
-                "reference": "eced5b5ce70518b983ff2be486e902bbd15135ae",
+                "url": "https://api.github.com/repos/Spomky-Labs/pki-framework/zipball/bf6f55a9d9eb25b7781640221cb54f5c727850d7",
+                "reference": "bf6f55a9d9eb25b7781640221cb54f5c727850d7",
                 "shasum": ""
             },
             "require": {
-                "brick/math": "^0.10|^0.11|^0.12|^0.13",
+                "brick/math": "^0.10|^0.11|^0.12|^0.13|^0.14",
                 "ext-mbstring": "*",
                 "php": ">=8.1"
             },
@@ -25857,7 +25863,7 @@
                 "ekino/phpstan-banned-code": "^1.0|^2.0|^3.0",
                 "ext-gmp": "*",
                 "ext-openssl": "*",
-                "infection/infection": "^0.28|^0.29",
+                "infection/infection": "^0.28|^0.29|^0.31",
                 "php-parallel-lint/php-parallel-lint": "^1.3",
                 "phpstan/extension-installer": "^1.3|^2.0",
                 "phpstan/phpstan": "^1.8|^2.0",
@@ -25867,8 +25873,8 @@
                 "phpunit/phpunit": "^10.1|^11.0|^12.0",
                 "rector/rector": "^1.0|^2.0",
                 "roave/security-advisories": "dev-latest",
-                "symfony/string": "^6.4|^7.0",
-                "symfony/var-dumper": "^6.4|^7.0",
+                "symfony/string": "^6.4|^7.0|^8.0",
+                "symfony/var-dumper": "^6.4|^7.0|^8.0",
                 "symplify/easy-coding-standard": "^12.0"
             },
             "suggest": {
@@ -25876,7 +25882,7 @@
                 "ext-gmp": "For better performance (or BCMath)",
                 "ext-openssl": "For OpenSSL based cyphering"
             },
-            "time": "2025-06-13T08:35:04+00:00",
+            "time": "2025-10-22T08:24:34+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -25931,7 +25937,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Spomky-Labs/pki-framework/issues",
-                "source": "https://github.com/Spomky-Labs/pki-framework/tree/1.3.0"
+                "source": "https://github.com/Spomky-Labs/pki-framework/tree/1.4.0"
             },
             "funding": [
                 {
@@ -29375,31 +29381,31 @@
         },
         {
             "name": "webmozart/assert",
-            "version": "1.11.0",
-            "version_normalized": "1.11.0.0",
+            "version": "1.12.1",
+            "version_normalized": "1.12.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozarts/assert.git",
-                "reference": "11cb2199493b2f8a3b53e7f19068fc6aac760991"
+                "reference": "9be6926d8b485f55b9229203f962b51ed377ba68"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozarts/assert/zipball/11cb2199493b2f8a3b53e7f19068fc6aac760991",
-                "reference": "11cb2199493b2f8a3b53e7f19068fc6aac760991",
+                "url": "https://api.github.com/repos/webmozarts/assert/zipball/9be6926d8b485f55b9229203f962b51ed377ba68",
+                "reference": "9be6926d8b485f55b9229203f962b51ed377ba68",
                 "shasum": ""
             },
             "require": {
                 "ext-ctype": "*",
+                "ext-date": "*",
+                "ext-filter": "*",
                 "php": "^7.2 || ^8.0"
             },
-            "conflict": {
-                "phpstan/phpstan": "<0.12.20",
-                "vimeo/psalm": "<4.6.1 || 4.6.2"
+            "suggest": {
+                "ext-intl": "",
+                "ext-simplexml": "",
+                "ext-spl": ""
             },
-            "require-dev": {
-                "phpunit/phpunit": "^8.5.13"
-            },
-            "time": "2022-06-03T18:03:27+00:00",
+            "time": "2025-10-29T15:56:20+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -29430,23 +29436,23 @@
             ],
             "support": {
                 "issues": "https://github.com/webmozarts/assert/issues",
-                "source": "https://github.com/webmozarts/assert/tree/1.11.0"
+                "source": "https://github.com/webmozarts/assert/tree/1.12.1"
             },
             "install-path": "../webmozart/assert"
         },
         {
             "name": "webonyx/graphql-php",
-            "version": "v15.25.1",
-            "version_normalized": "15.25.1.0",
+            "version": "v15.25.2",
+            "version_normalized": "15.25.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webonyx/graphql-php.git",
-                "reference": "60ef919138a171bdca5fc22c1e9aea8bbc59e5b7"
+                "reference": "da3891cb35fa694ad5a796a6c4acfa6bf987740a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webonyx/graphql-php/zipball/60ef919138a171bdca5fc22c1e9aea8bbc59e5b7",
-                "reference": "60ef919138a171bdca5fc22c1e9aea8bbc59e5b7",
+                "url": "https://api.github.com/repos/webonyx/graphql-php/zipball/da3891cb35fa694ad5a796a6c4acfa6bf987740a",
+                "reference": "da3891cb35fa694ad5a796a6c4acfa6bf987740a",
                 "shasum": ""
             },
             "require": {
@@ -29459,12 +29465,12 @@
                 "amphp/http-server": "^2.1",
                 "dms/phpunit-arraysubset-asserts": "dev-master",
                 "ergebnis/composer-normalize": "^2.28",
-                "friendsofphp/php-cs-fixer": "3.88.2",
+                "friendsofphp/php-cs-fixer": "3.89.1",
                 "mll-lab/php-cs-fixer-config": "5.11.0",
                 "nyholm/psr7": "^1.5",
                 "phpbench/phpbench": "^1.2",
                 "phpstan/extension-installer": "^1.1",
-                "phpstan/phpstan": "2.1.30",
+                "phpstan/phpstan": "2.1.31",
                 "phpstan/phpstan-phpunit": "2.0.7",
                 "phpstan/phpstan-strict-rules": "2.0.7",
                 "phpunit/phpunit": "^9.5 || ^10.5.21 || ^11",
@@ -29482,7 +29488,7 @@
                 "psr/http-message": "To use standard GraphQL server",
                 "react/promise": "To leverage async resolving on React PHP platform"
             },
-            "time": "2025-10-08T10:29:48+00:00",
+            "time": "2025-10-25T09:33:47+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -29502,7 +29508,7 @@
             ],
             "support": {
                 "issues": "https://github.com/webonyx/graphql-php/issues",
-                "source": "https://github.com/webonyx/graphql-php/tree/v15.25.1"
+                "source": "https://github.com/webonyx/graphql-php/tree/v15.25.2"
             },
             "funding": [
                 {

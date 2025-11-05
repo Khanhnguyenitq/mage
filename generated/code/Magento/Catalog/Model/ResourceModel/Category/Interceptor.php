@@ -260,7 +260,7 @@ class Interceptor extends \Magento\Catalog\Model\ResourceModel\Category implemen
     /**
      * {@inheritdoc}
      */
-    public function getCategoryWithChildren(int $categoryId) : array
+    public function getCategoryWithChildren(int $categoryId): array
     {
         $pluginInfo = $this->pluginList->getNext($this->subjectType, 'getCategoryWithChildren');
         return $pluginInfo ? $this->___callPlugins('getCategoryWithChildren', func_get_args(), $pluginInfo) : parent::getCategoryWithChildren($categoryId);

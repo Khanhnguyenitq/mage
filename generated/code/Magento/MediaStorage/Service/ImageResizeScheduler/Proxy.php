@@ -90,7 +90,7 @@ class Proxy extends \Magento\MediaStorage\Service\ImageResizeScheduler implement
     /**
      * {@inheritdoc}
      */
-    public function schedule(string $imageName) : bool
+    public function schedule(string $imageName): bool
     {
         return $this->_getSubject()->schedule($imageName);
     }

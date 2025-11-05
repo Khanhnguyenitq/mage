@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">student_custom_grid.student_custom_grid_data_source</item>
+        </item>
+        <item name="spinner" xsi:type="string">student_custom_grid_columns</item>
+    </argument>
+
+    <dataSource name="student_custom_grid_data_source">
+        <argument name="dataProvider" xsi:type="configurableObject">
+            <argument name="class" xsi:type="string">Nguyen\Student\Ui\DataProvider\StudentGridDataProvider</argument>
+            <argument name="name" xsi:type="string">student_custom_grid_data_source</argument>
+            <argument name="primaryFieldName" xsi:type="string">entity_id</argument>
+            <argument name="requestFieldName" xsi:type="string">id</argument>
+        </argument>
+    </dataSource>
+
+    <columns name="student_custom_grid_columns">
+        <!-- Cột Type -->
+        <column name="type">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="component" xsi:type="string">Nguyen_Student/js/grid/columns/group</item>
+                    <item name="label" xsi:type="string" translate="true">Type</item>
+                    <item name="sortOrder" xsi:type="number">10</item>
+                    <item name="has_preview" xsi:type="boolean">true</item>
+                </item>
+            </argument>
+        </column>
+
+        <!-- Cột All Data -->
+        <column name="all_data">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string" translate="true">All Data</item>
+                    <item name="sortOrder" xsi:type="number">20</item>
+                </item>
+            </argument>
+        </column>
+
+        <!-- Các cột W1 - W5 -->
+        <column name="w1">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string" translate="true">W1</item>
+                    <item name="sortOrder" xsi:type="number">30</item>
+                    <item name="align" xsi:type="string">right</item>
+                </item>
+            </argument>
+        </column>
+
+        <column name="w2">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string" translate="true">W2</item>
+                    <item name="sortOrder" xsi:type="number">40</item>
+                    <item name="align" xsi:type="string">right</item>
+                </item>
+            </argument>
+        </column>
+
+        <column name="w3">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string" translate="true">W3</item>
+                    <item name="sortOrder" xsi:type="number">50</item>
+                    <item name="align" xsi:type="string">right</item>
+                </item>
+            </argument>
+        </column>
+
+        <column name="w4">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string" translate="true">W4</item>
+                    <item name="sortOrder" xsi:type="number">60</item>
+                    <item name="align" xsi:type="string">right</item>
+                </item>
+            </argument>
+        </column>
+
+        <column name="w5">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string" translate="true">W5</item>
+                    <item name="sortOrder" xsi:type="number">70</item>
+                    <item name="align" xsi:type="string">right</item>
+                </item>
+            </argument>
+        </column>
+    </columns>
+</listing>

@@ -90,7 +90,7 @@ class Proxy extends \Magento\Quote\Model\ValidationRules\QuoteValidationComposit
     /**
      * {@inheritdoc}
      */
-    public function validate(\Magento\Quote\Model\Quote $quote) : array
+    public function validate(\Magento\Quote\Model\Quote $quote): array
     {
         return $this->_getSubject()->validate($quote);
     }

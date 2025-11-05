@@ -17,7 +17,7 @@ class Interceptor extends \Magento\InventoryReservations\Model\AppendReservation
     /**
      * {@inheritdoc}
      */
-    public function execute(array $reservations) : void
+    public function execute(array $reservations): void
     {
         $pluginInfo = $this->pluginList->getNext($this->subjectType, 'execute');
         $pluginInfo ? $this->___callPlugins('execute', func_get_args(), $pluginInfo) : parent::execute($reservations);

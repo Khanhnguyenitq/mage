@@ -146,7 +146,7 @@ class Proxy extends \Magento\MessageQueue\Console\RestartConsumerCommand impleme
     /**
      * {@inheritdoc}
      */
-    public function complete(\Symfony\Component\Console\Completion\CompletionInput $input, \Symfony\Component\Console\Completion\CompletionSuggestions $suggestions) : void
+    public function complete(\Symfony\Component\Console\Completion\CompletionInput $input, \Symfony\Component\Console\Completion\CompletionSuggestions $suggestions): void
     {
         $this->_getSubject()->complete($input, $suggestions);
     }

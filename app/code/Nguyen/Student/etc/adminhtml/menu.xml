@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <!-- Menu cha nằm trong Content -->
+        <add id="Nguyen_Student::main" 
+             title="Student Management" 
+             module="Nguyen_Student" 
+             sortOrder="90" 
+             resource="Nguyen_Student::main"
+             parent="Magento_Backend::content"/>
+        
+        <!-- Menu con có action trỏ đến controller -->
+        <add id="Nguyen_Student::students" 
+             title="Students List" 
+             module="Nguyen_Student" 
+             sortOrder="10" 
+             resource="Nguyen_Student::students"
+             parent="Nguyen_Student::main"
+             action="student/index/index"/>
+    </menu>
+</config>

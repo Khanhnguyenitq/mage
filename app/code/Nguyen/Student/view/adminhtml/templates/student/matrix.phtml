@@ -1,0 +1,32 @@
+<?php
+$students = $block->getStudentData();
+
+// Số tuần (cột W)
+$weeks = ['W1','W2','W3','W4','W5'];
+
+// Các dòng trong nhóm All
+$fields = ['ID', 'Name', 'Email', 'Created_At'];
+?>
+
+<style>
+    table.matrix { border-collapse: collapse; width: 100%; }
+    table.matrix td, table.matrix th { border: 1px solid #000; padding: 8px; }
+    table.matrix td.group { writing-mode: vertical-rl; text-align: center; font-weight: bold; }
+</style>
+
+<table class="matrix">
+    <tr>
+        <td rowspan="4" class="group">All</td>
+        <?php foreach ($weeks as $week): ?>
+            <th><?= $week ?></th>
+        <?php endforeach; ?>
+    </tr>
+
+    <?php foreach ($fields as $field): ?>
+        <tr>
+            <?php foreach ($weeks as $week): ?>
+                <td></td>
+            <?php endforeach; ?>
+        </tr>
+    <?php endforeach; ?>
+</table>

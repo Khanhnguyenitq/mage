@@ -17,7 +17,7 @@ class Interceptor extends \Magento\MediaGallery\Model\ResourceModel\DeleteAssets
     /**
      * {@inheritdoc}
      */
-    public function execute(array $paths) : void
+    public function execute(array $paths): void
     {
         $pluginInfo = $this->pluginList->getNext($this->subjectType, 'execute');
         $pluginInfo ? $this->___callPlugins('execute', func_get_args(), $pluginInfo) : parent::execute($paths);

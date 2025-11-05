@@ -90,7 +90,7 @@ class Proxy extends \Magento\InventoryReservationCli\Model\GetSalableQuantityInc
     /**
      * {@inheritdoc}
      */
-    public function execute(int $bunchSize = 50) : \Generator
+    public function execute(int $bunchSize = 50): \Generator
     {
         return $this->_getSubject()->execute($bunchSize);
     }

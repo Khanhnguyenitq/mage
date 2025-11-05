@@ -17,7 +17,7 @@ class Interceptor extends \Magento\MediaGallerySynchronization\Model\Filesystem\
     /**
      * {@inheritdoc}
      */
-    public function execute(string $path) : \Magento\MediaGallerySynchronization\Model\Filesystem\FileInfo
+    public function execute(string $path): \Magento\MediaGallerySynchronization\Model\Filesystem\FileInfo
     {
         $pluginInfo = $this->pluginList->getNext($this->subjectType, 'execute');
         return $pluginInfo ? $this->___callPlugins('execute', func_get_args(), $pluginInfo) : parent::execute($path);

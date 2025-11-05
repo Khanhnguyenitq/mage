@@ -834,7 +834,7 @@ class Proxy extends \Magento\Framework\App\Request\Http implements \Magento\Fram
     /**
      * {@inheritdoc}
      */
-    public function __toString() : string
+    public function __toString(): string
     {
         return $this->_getSubject()->__toString();
     }

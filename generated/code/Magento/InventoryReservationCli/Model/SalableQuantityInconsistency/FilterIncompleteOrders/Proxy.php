@@ -90,7 +90,7 @@ class Proxy extends \Magento\InventoryReservationCli\Model\SalableQuantityIncons
     /**
      * {@inheritdoc}
      */
-    public function execute(array $inconsistencies) : array
+    public function execute(array $inconsistencies): array
     {
         return $this->_getSubject()->execute($inconsistencies);
     }

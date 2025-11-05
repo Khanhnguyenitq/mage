@@ -90,7 +90,7 @@ class Proxy extends \Magento\ReCaptchaVersion2Invisible\Model\Frontend\Validatio
     /**
      * {@inheritdoc}
      */
-    public function get() : \Magento\ReCaptchaValidationApi\Api\Data\ValidationConfigInterface
+    public function get(): \Magento\ReCaptchaValidationApi\Api\Data\ValidationConfigInterface
     {
         return $this->_getSubject()->get();
     }

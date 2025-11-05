@@ -17,7 +17,7 @@ class Interceptor extends \Magento\Quote\Model\Quote\Item\Processor implements \
     /**
      * {@inheritdoc}
      */
-    public function init(\Magento\Catalog\Model\Product $product, \Magento\Framework\DataObject $request) : \Magento\Quote\Model\Quote\Item
+    public function init(\Magento\Catalog\Model\Product $product, \Magento\Framework\DataObject $request): \Magento\Quote\Model\Quote\Item
     {
         $pluginInfo = $this->pluginList->getNext($this->subjectType, 'init');
         return $pluginInfo ? $this->___callPlugins('init', func_get_args(), $pluginInfo) : parent::init($product, $request);
@@ -26,7 +26,7 @@ class Interceptor extends \Magento\Quote\Model\Quote\Item\Processor implements \
     /**
      * {@inheritdoc}
      */
-    public function prepare(\Magento\Quote\Model\Quote\Item $item, \Magento\Framework\DataObject $request, \Magento\Catalog\Model\Product $candidate) : void
+    public function prepare(\Magento\Quote\Model\Quote\Item $item, \Magento\Framework\DataObject $request, \Magento\Catalog\Model\Product $candidate): void
     {
         $pluginInfo = $this->pluginList->getNext($this->subjectType, 'prepare');
         $pluginInfo ? $this->___callPlugins('prepare', func_get_args(), $pluginInfo) : parent::prepare($item, $request, $candidate);
@@ -35,7 +35,7 @@ class Interceptor extends \Magento\Quote\Model\Quote\Item\Processor implements \
     /**
      * {@inheritdoc}
      */
-    public function merge(\Magento\Quote\Model\Quote\Item $source, \Magento\Quote\Model\Quote\Item $target) : \Magento\Quote\Model\Quote\Item
+    public function merge(\Magento\Quote\Model\Quote\Item $source, \Magento\Quote\Model\Quote\Item $target): \Magento\Quote\Model\Quote\Item
     {
         $pluginInfo = $this->pluginList->getNext($this->subjectType, 'merge');
         return $pluginInfo ? $this->___callPlugins('merge', func_get_args(), $pluginInfo) : parent::merge($source, $target);

@@ -80,7 +80,7 @@ class Interceptor extends \Magento\Indexer\Console\Command\IndexerShowDimensions
     /**
      * {@inheritdoc}
      */
-    public function complete(\Symfony\Component\Console\Completion\CompletionInput $input, \Symfony\Component\Console\Completion\CompletionSuggestions $suggestions) : void
+    public function complete(\Symfony\Component\Console\Completion\CompletionInput $input, \Symfony\Component\Console\Completion\CompletionSuggestions $suggestions): void
     {
         $pluginInfo = $this->pluginList->getNext($this->subjectType, 'complete');
         $pluginInfo ? $this->___callPlugins('complete', func_get_args(), $pluginInfo) : parent::complete($input, $suggestions);

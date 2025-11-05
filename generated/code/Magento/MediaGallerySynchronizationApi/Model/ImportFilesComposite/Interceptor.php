@@ -17,7 +17,7 @@ class Interceptor extends \Magento\MediaGallerySynchronizationApi\Model\ImportFi
     /**
      * {@inheritdoc}
      */
-    public function execute(array $paths) : void
+    public function execute(array $paths): void
     {
         $pluginInfo = $this->pluginList->getNext($this->subjectType, 'execute');
         $pluginInfo ? $this->___callPlugins('execute', func_get_args(), $pluginInfo) : parent::execute($paths);

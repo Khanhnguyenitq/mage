@@ -17,7 +17,7 @@ class Interceptor extends \Magento\Backend\Console\Command\MaintenanceDisableCom
     /**
      * {@inheritdoc}
      */
-    public function isSetAddressInfo() : bool
+    public function isSetAddressInfo(): bool
     {
         $pluginInfo = $this->pluginList->getNext($this->subjectType, 'isSetAddressInfo');
         return $pluginInfo ? $this->___callPlugins('isSetAddressInfo', func_get_args(), $pluginInfo) : parent::isSetAddressInfo();
@@ -89,7 +89,7 @@ class Interceptor extends \Magento\Backend\Console\Command\MaintenanceDisableCom
     /**
      * {@inheritdoc}
      */
-    public function complete(\Symfony\Component\Console\Completion\CompletionInput $input, \Symfony\Component\Console\Completion\CompletionSuggestions $suggestions) : void
+    public function complete(\Symfony\Component\Console\Completion\CompletionInput $input, \Symfony\Component\Console\Completion\CompletionSuggestions $suggestions): void
     {
         $pluginInfo = $this->pluginList->getNext($this->subjectType, 'complete');
         $pluginInfo ? $this->___callPlugins('complete', func_get_args(), $pluginInfo) : parent::complete($input, $suggestions);

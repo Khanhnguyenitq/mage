@@ -1,11 +1,1 @@
-/**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
-
-define([
-    'jquery',
-    'js-cookie/cookie-wrapper'
-], function () {
-
-});
+/var/www/html/magento2/lib/web/jquery/jquery.cookie.js

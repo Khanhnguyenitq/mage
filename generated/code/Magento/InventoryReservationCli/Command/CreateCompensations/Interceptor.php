@@ -17,7 +17,7 @@ class Interceptor extends \Magento\InventoryReservationCli\Command\CreateCompens
     /**
      * {@inheritdoc}
      */
-    public function execute(\Symfony\Component\Console\Input\InputInterface $input, \Symfony\Component\Console\Output\OutputInterface $output) : int
+    public function execute(\Symfony\Component\Console\Input\InputInterface $input, \Symfony\Component\Console\Output\OutputInterface $output): int
     {
         $pluginInfo = $this->pluginList->getNext($this->subjectType, 'execute');
         return $pluginInfo ? $this->___callPlugins('execute', func_get_args(), $pluginInfo) : parent::execute($input, $output);
@@ -89,7 +89,7 @@ class Interceptor extends \Magento\InventoryReservationCli\Command\CreateCompens
     /**
      * {@inheritdoc}
      */
-    public function complete(\Symfony\Component\Console\Completion\CompletionInput $input, \Symfony\Component\Console\Completion\CompletionSuggestions $suggestions) : void
+    public function complete(\Symfony\Component\Console\Completion\CompletionInput $input, \Symfony\Component\Console\Completion\CompletionSuggestions $suggestions): void
     {
         $pluginInfo = $this->pluginList->getNext($this->subjectType, 'complete');
         $pluginInfo ? $this->___callPlugins('complete', func_get_args(), $pluginInfo) : parent::complete($input, $suggestions);

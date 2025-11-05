@@ -440,7 +440,7 @@ class Interceptor extends \Magento\MediaStorage\Model\File\Storage\Response impl
     /**
      * {@inheritdoc}
      */
-    public function __toString() : string
+    public function __toString(): string
     {
         $pluginInfo = $this->pluginList->getNext($this->subjectType, '__toString');
         return $pluginInfo ? $this->___callPlugins('__toString', func_get_args(), $pluginInfo) : parent::__toString();

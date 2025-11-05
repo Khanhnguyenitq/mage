@@ -17,7 +17,7 @@ class Interceptor extends \Magento\MediaGallerySynchronization\Model\CreateAsset
     /**
      * {@inheritdoc}
      */
-    public function execute(string $path) : \Magento\MediaGalleryApi\Api\Data\AssetInterface
+    public function execute(string $path): \Magento\MediaGalleryApi\Api\Data\AssetInterface
     {
         $pluginInfo = $this->pluginList->getNext($this->subjectType, 'execute');
         return $pluginInfo ? $this->___callPlugins('execute', func_get_args(), $pluginInfo) : parent::execute($path);

@@ -1,0 +1,14 @@
+<!-- Group Row -->
+<!-- ko if: $row()._is_group -->
+<strong data-bind="html: $row().type"></strong>
+<!-- /ko -->
+
+<!-- Child Row -->
+<!-- ko if: $row()._is_child -->
+<span style="display: inline-block; width: 20px;"></span>
+<!-- /ko -->
+
+<!-- Normal Row -->
+<!-- ko ifnot: $row()._is_group || $row()._is_child -->
+<span data-bind="text: $row()[index]"></span>
+<!-- /ko -->

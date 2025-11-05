@@ -359,7 +359,7 @@ class Interceptor extends \Magento\Widget\Model\Template\Filter implements \Mage
     /**
      * {@inheritdoc}
      */
-    public function setStrictMode(bool $strictMode) : bool
+    public function setStrictMode(bool $strictMode): bool
     {
         $pluginInfo = $this->pluginList->getNext($this->subjectType, 'setStrictMode');
         return $pluginInfo ? $this->___callPlugins('setStrictMode', func_get_args(), $pluginInfo) : parent::setStrictMode($strictMode);
@@ -368,7 +368,7 @@ class Interceptor extends \Magento\Widget\Model\Template\Filter implements \Mage
     /**
      * {@inheritdoc}
      */
-    public function isStrictMode() : bool
+    public function isStrictMode(): bool
     {
         $pluginInfo = $this->pluginList->getNext($this->subjectType, 'isStrictMode');
         return $pluginInfo ? $this->___callPlugins('isStrictMode', func_get_args(), $pluginInfo) : parent::isStrictMode();

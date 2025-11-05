@@ -17,7 +17,7 @@ class Interceptor extends \PayPal\Braintree\Console\VaultMigrate implements \Mag
     /**
      * {@inheritdoc}
      */
-    public function getOptionsList() : array
+    public function getOptionsList(): array
     {
         $pluginInfo = $this->pluginList->getNext($this->subjectType, 'getOptionsList');
         return $pluginInfo ? $this->___callPlugins('getOptionsList', func_get_args(), $pluginInfo) : parent::getOptionsList();
@@ -26,7 +26,7 @@ class Interceptor extends \PayPal\Braintree\Console\VaultMigrate implements \Mag
     /**
      * {@inheritdoc}
      */
-    public function remapCustomerData($customers) : array
+    public function remapCustomerData($customers): array
     {
         $pluginInfo = $this->pluginList->getNext($this->subjectType, 'remapCustomerData');
         return $pluginInfo ? $this->___callPlugins('remapCustomerData', func_get_args(), $pluginInfo) : parent::remapCustomerData($customers);
@@ -98,7 +98,7 @@ class Interceptor extends \PayPal\Braintree\Console\VaultMigrate implements \Mag
     /**
      * {@inheritdoc}
      */
-    public function complete(\Symfony\Component\Console\Completion\CompletionInput $input, \Symfony\Component\Console\Completion\CompletionSuggestions $suggestions) : void
+    public function complete(\Symfony\Component\Console\Completion\CompletionInput $input, \Symfony\Component\Console\Completion\CompletionSuggestions $suggestions): void
     {
         $pluginInfo = $this->pluginList->getNext($this->subjectType, 'complete');
         $pluginInfo ? $this->___callPlugins('complete', func_get_args(), $pluginInfo) : parent::complete($input, $suggestions);
